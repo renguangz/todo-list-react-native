@@ -1,13 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Provider } from 'react-redux';
+import TodoInput from './components/TodoInput';
+import TodoList from './components/TodoList';
+import configureStore from './redux/store';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider store={configureStore()}>
+      <SafeAreaView style={styles.container}>
+        <TodoInput />
+        {/* <Text>todo list ul li，每個項目旁邊做刪除按鈕，透過點擊變成complete</Text> */}
+        <TodoList />
+        <StatusBar style="auto" />
+      </SafeAreaView>
+    </Provider>
   );
 }
 
