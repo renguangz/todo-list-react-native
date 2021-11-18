@@ -18,28 +18,50 @@ const TodoInput = ({ addTodo }) => {
     }
     return (
         <View style={styles.inputContainer}>
-            <TextInput
-                multiline={true}
-                placeholder='請輸入todo'
-                value={inputValue}
-                onChangeText={input => setInputValue(input)}
-            />
-            <Button
-                title='新增'
-                onPress={handlePressButton}
-            />
+            <View style={{...styles.border, flex: 1, marginRight: 12}}>
+                <TextInput
+                    multiline={true}
+                    placeholder='請輸入Todo'
+                    value={inputValue}
+                    onChangeText={input => setInputValue(input)}
+                    style={styles.input}
+                />
+            </View>
+            <View style={styles.border}>
+                <Button
+                    title='新增'
+                    onPress={handlePressButton}
+                    color='#818181'
+                />
+            </View>
         </View>
     )
 };
 
 const styles = StyleSheet.create({
     inputContainer: {
+        // backgroundColor: 'orange',
         marginTop: 100,
         flexDirection: 'row',
-        width: '60%',
+        width: '88%',
+        height: 60,
         alignItems: 'center',
         justifyContent: 'center',
-    }
+    },
+    border: {
+        // backgroundColor: 'steelblue',
+        height: '100%',
+        // flex: 1,
+        borderWidth: 2,
+        borderColor: '#DCDCDC',
+        padding: 8,
+        borderRadius: 12,
+        justifyContent: 'center',
+    },
+    input: {
+        // backgroundColor: 'pink',
+        fontSize: 28,
+    },
 })
 
 const mapStateToProps = state => {
