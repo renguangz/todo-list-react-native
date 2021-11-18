@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Text, TextInput, Button, Alert } from "react-native";
+import { StyleSheet, View, TextInput, Button, Alert } from "react-native";
 import { connect } from "react-redux";
 import { addTodo } from "../redux";
 
-const TodoInput = ({ todos, addTodo }) => {
+const TodoInput = ({ addTodo }) => {
     const [inputValue, setInputValue] = useState('');
 
     const handlePressButton = () => {

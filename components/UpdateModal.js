@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Modal, View, StyleSheet, Text, Pressable, Button, TextInput } from "react-native";
 
 const UpdateModal = ({ visible, handlePressCancel, handlePressUpdate, updateData, onChangeInput }) => {
@@ -15,7 +15,6 @@ const UpdateModal = ({ visible, handlePressCancel, handlePressUpdate, updateData
                         <Text style={{ color: '#7E7E7E', fontSize: 24, }}>修改內容</Text>
                     </View>
                     <View style={styles.modalContent}>
-                        {/* <Text>{updateData}</Text> */}
                         <TextInput
                             multiline={true}
                             style={styles.modalInput}
@@ -52,8 +51,6 @@ const styles = StyleSheet.create({
         width: 300,
         height: 200,
         backgroundColor: '#ffffff',
-        // borderWidth: 1,
-        // borderColor: '#000',
         borderRadius: 20,
     },
     centeredView: {
@@ -63,7 +60,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#00000099',
     },
     modalTitle: {
-        // backgroundColor: '#ff0',
         height: 50,
         justifyContent: 'center',
         alignItems: 'center',
@@ -71,7 +67,6 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: 20,
     },
     modalContent: {
-        // backgroundColor: '#ff0',
         height: 100,
         alignItems: 'center',
         justifyContent: 'center',
@@ -91,7 +86,6 @@ const styles = StyleSheet.create({
         borderBottomRightRadius: 20,
     },
     pressButton: {
-        // backgroundColor: 'pink',
         width: '50%',
         height: '100%',
         alignItems: 'center',

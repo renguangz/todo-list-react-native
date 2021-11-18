@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import { Provider } from 'react-redux';
 import TodoInput from './components/TodoInput';
 import TodoList from './components/TodoList';
@@ -11,7 +11,6 @@ export default function App() {
     <Provider store={configureStore()}>
       <SafeAreaView style={styles.container}>
         <TodoInput />
-        {/* <Text>todo list ul li，每個項目旁邊做刪除按鈕，透過點擊變成complete</Text> */}
         <TodoList />
         <StatusBar style="auto" />
       </SafeAreaView>
